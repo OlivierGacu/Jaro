@@ -5,6 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JARO Projects & Consulting</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1D2F42',
+            secondary: '#F7941D',
+            light: '#F4F9FC'
+          }
+        }
+      }
+    };
+  </script>
   <style>
     html {
       scroll-behavior: smooth;
@@ -14,23 +27,42 @@
 <body class="bg-white text-gray-800">
 
   <!-- Header -->
-  <header class="bg-[#1D2F42] text-white h-20 sticky top-0 z-50 shadow">
+  <header class="bg-primary text-white h-20 sticky top-0 z-50 shadow">
     <div class="container mx-auto flex items-center justify-between h-full px-4">
       <div class="flex items-center space-x-4 h-full">
         <img src="jarologo.png" alt="JARO Logo" class="h-full w-auto object-contain"/>
         <h1 class="text-2xl font-bold">JARO Projects & Consulting</h1>
       </div>
-      <nav class="space-x-4 hidden sm:block">
-        <a href="#home" class="hover:text-[#F7941D] transition">Home</a>
-        <a href="#services" class="hover:text-[#F7941D] transition">Services</a>
-        <a href="#what-we-do" class="hover:text-[#F7941D] transition">What We Do</a>
-        <a href="#testimonials" class="hover:text-[#F7941D] transition">Testimonials</a>
-        <a href="#why-choose-us" class="hover:text-[#F7941D] transition">Why Choose Us</a>
-        <a href="#team" class="hover:text-[#F7941D] transition">Team</a>
-        <a href="#contact" class="hover:text-[#F7941D] transition">Contact</a>
+      <nav class="hidden sm:flex space-x-4">
+        <a href="#home" class="hover:text-secondary transition">Home</a>
+        <a href="#what-we-do" class="hover:text-secondary transition">What We Do</a>
+        <a href="#services" class="hover:text-secondary transition">Services</a>
+        <a href="#testimonials" class="hover:text-secondary transition">Testimonials</a>
+        <a href="#why-choose-us" class="hover:text-secondary transition">Why Choose Us</a>
+        <a href="#team" class="hover:text-secondary transition">Team</a>
+        <a href="#contact" class="hover:text-secondary transition">Contact</a>
       </nav>
+      <!-- Mobile menu button -->
+      <div class="sm:hidden">
+        <button id="menuBtn" class="text-white focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="sm:hidden hidden px-4 pb-4 bg-primary">
+      <a href="#home" class="block py-2 hover:text-secondary">Home</a>
+      <a href="#what-we-do" class="block py-2 hover:text-secondary">What We Do</a>
+      <a href="#services" class="block py-2 hover:text-secondary">Services</a>
+      <a href="#testimonials" class="block py-2 hover:text-secondary">Testimonials</a>
+      <a href="#why-choose-us" class="block py-2 hover:text-secondary">Why Choose Us</a>
+      <a href="#team" class="block py-2 hover:text-secondary">Team</a>
+      <a href="#contact" class="block py-2 hover:text-secondary">Contact</a>
     </div>
   </header>
+
+  <!-- Main content continues here (Home, What We Do, Services, etc.) -->
 
   <!-- Home / Hero Section -->
   <section id="home" class="bg-[#F4F9FC] py-12 px-4 text-center">
@@ -151,7 +183,7 @@
   <!-- Contact Section -->
   <section id="contact" class="py-12 px-4">
     <div class="container mx-auto text-center">
-      <h3 class="text-2xl font-bold text-[#1D2F42] mb-4">Get in Touch</h3>
+      <h3 class="text-2xl font-bold text-primary mb-4">Get in Touch</h3>
       <p class="text-gray-700 mb-2">Phone: +250795577029, +12147092117</p>
       <p class="text-gray-700 mb-2">Email: alwalid.adil@gmail.com</p>
       <p class="text-gray-700">Email: jaropc@gmail.com</p>
@@ -159,11 +191,20 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-[#1D2F42] text-white py-4">
+  <footer class="bg-primary text-white py-4">
     <div class="container mx-auto text-center">
       <p>&copy; 2025 JARO Projects & Consulting. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- Script for Mobile Menu -->
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 
 </body>
 </html>
