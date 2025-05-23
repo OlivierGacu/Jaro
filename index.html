@@ -5,42 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>JARO Projects & Consulting</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {},
+      }
+    }
+  </script>
 </head>
 <body class="bg-white text-gray-800">
 
-  <!-- Header -->
-  <header class="bg-[#1D2F42] text-white h-20">
-    <div class="container mx-auto flex items-center justify-between h-full px-4">
+  <!-- Fixed Header with Mobile Menu -->
+  <header class="bg-[#1D2F42] text-white fixed top-0 left-0 w-full z-50 shadow">
+    <div class="max-w-7xl mx-auto flex items-center justify-between h-20 px-4">
       <div class="flex items-center space-x-4 h-full">
-        <!-- Logo fills header height -->
         <img src="jarologo.png" alt="JARO Logo" class="h-full w-auto object-contain"/>
-        <h1 class="text-2xl font-bold">JARO Projects & Consulting</h1>
+        <h1 class="text-lg sm:text-2xl font-bold">JARO Projects & Consulting</h1>
       </div>
-      <nav class="space-x-4">
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-4">
         <a href="#services" class="hover:text-[#F7941D] transition">Services</a>
         <a href="#team" class="hover:text-[#F7941D] transition">Team</a>
         <a href="#contact" class="hover:text-[#F7941D] transition">Contact</a>
       </nav>
+      <!-- Mobile Button -->
+      <div class="md:hidden">
+        <button id="mobile-menu-button" class="focus:outline-none">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#1D2F42] px-4 py-2 space-y-2">
+      <a href="#services" class="block text-white hover:text-[#F7941D]">Services</a>
+      <a href="#team" class="block text-white hover:text-[#F7941D]">Team</a>
+      <a href="#contact" class="block text-white hover:text-[#F7941D]">Contact</a>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="bg-[#F4F9FC] py-12">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-semibold text-[#1D2F42] mb-4">Empowering Education, Humanitarian Response, and Sustainable Development</h2>
-      <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+  <section class="bg-[#F4F9FC] py-12 pt-32 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl sm:text-3xl font-semibold text-[#1D2F42] mb-4">Empowering Education, Humanitarian Response, and Sustainable Development</h2>
+      <p class="text-base sm:text-lg text-gray-700">
         JARO Projects & Consulting is a Kigali-based firm providing innovative, community-centered solutions in education, humanitarian response, and sustainable development.
       </p>
     </div>
   </section>
 
   <!-- Services Section -->
-  <section id="services" class="py-12">
-    <div class="container mx-auto px-4">
-      <h3 class="text-2xl font-bold text-[#1D2F42] mb-6 text-center">Our Services</h3>
-      <div class="grid md:grid-cols-2 gap-6">
+  <section id="services" class="py-12 px-4">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-xl sm:text-2xl font-bold text-[#1D2F42] mb-6 text-center">Our Services</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="border rounded-lg p-6 shadow hover:shadow-lg transition">
-          <h4 class="text-xl font-semibold mb-2">ESL Curriculum Development & Instruction</h4>
+          <h4 class="text-lg sm:text-xl font-semibold mb-2">ESL Curriculum Development & Instruction</h4>
           <ul class="list-disc list-inside text-gray-700">
             <li>Workplace ESL Training</li>
             <li>Digital Learning Modules</li>
@@ -48,7 +70,7 @@
           </ul>
         </div>
         <div class="border rounded-lg p-6 shadow hover:shadow-lg transition">
-          <h4 class="text-xl font-semibold mb-2">Sustainable Development Solutions</h4>
+          <h4 class="text-lg sm:text-xl font-semibold mb-2">Sustainable Development Solutions</h4>
           <ul class="list-disc list-inside text-gray-700">
             <li>Sustainable Livelihoods Programming</li>
             <li>Environmental Education & Awareness</li>
@@ -61,21 +83,21 @@
   </section>
 
   <!-- Team Section -->
-  <section id="team" class="bg-gray-100 py-12">
-    <div class="container mx-auto px-4">
-      <h3 class="text-2xl font-bold text-[#1D2F42] mb-6 text-center">Meet Our Team</h3>
-      <div class="grid md:grid-cols-2 gap-6">
+  <section id="team" class="bg-gray-100 py-12 px-4">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-xl sm:text-2xl font-bold text-[#1D2F42] mb-6 text-center">Meet Our Team</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="flex items-center space-x-4">
           <img src="md.jpg" alt="Managing Director" class="h-24 w-24 rounded-full object-cover"/>
           <div>
-            <h4 class="text-xl font-semibold">Adil Tajeldin Jarelnabi</h4>
+            <h4 class="text-lg sm:text-xl font-semibold">Adil Tajeldin Jarelnabi</h4>
             <p class="text-gray-700">Managing Director</p>
           </div>
         </div>
         <div class="flex items-center space-x-4">
           <img src="founder.jpg" alt="Founder" class="h-24 w-24 rounded-full object-cover"/>
           <div>
-            <h4 class="text-xl font-semibold">[Founder's Name]</h4>
+            <h4 class="text-lg sm:text-xl font-semibold">[Founder's Name]</h4>
             <p class="text-gray-700">Founder, Consultant, PMP</p>
           </div>
         </div>
@@ -84,9 +106,9 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-12">
-    <div class="container mx-auto px-4 text-center">
-      <h3 class="text-2xl font-bold text-[#1D2F42] mb-4">Get in Touch</h3>
+  <section id="contact" class="py-12 px-4 text-center">
+    <div class="max-w-xl mx-auto">
+      <h3 class="text-xl sm:text-2xl font-bold text-[#1D2F42] mb-4">Get in Touch</h3>
       <p class="text-gray-700 mb-2">Phone: +250795577029, +12147092117</p>
       <p class="text-gray-700 mb-2">Email: alwalid.adil@gmail.com</p>
       <p class="text-gray-700">Email: jaropc@gmail.com</p>
@@ -95,10 +117,20 @@
 
   <!-- Footer -->
   <footer class="bg-[#1D2F42] text-white py-4">
-    <div class="container mx-auto px-4 text-center">
+    <div class="text-center px-4">
       <p>&copy; 2025 JARO Projects & Consulting. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- Mobile Menu Toggle Script -->
+  <script>
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
 
 </body>
 </html>
