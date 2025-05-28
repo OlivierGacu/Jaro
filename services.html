@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services | JARO Projects & Consulting</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1D2F42',
+            secondary: '#F7941D',
+            light: '#F4F9FC'
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-primary text-white h-20 sticky top-0 z-50 shadow">
+    <div class="container mx-auto flex items-center justify-between h-full px-4">
+      <div class="flex items-center space-x-4 h-full">
+        <img src="jarologo.png" alt="JARO Logo" class="h-full w-auto object-contain"/>
+        <h1 class="text-2xl font-bold">JARO Projects & Consulting</h1>
+      </div>
+      <nav class="hidden sm:flex space-x-4">
+        <a href="index.html" class="hover:text-secondary transition">Home</a>
+        <a href="services.html" class="hover:text-secondary transition">Services</a>
+        <a href="index.html#contact" class="hover:text-secondary transition">Contact</a>
+      </nav>
+      <div class="sm:hidden">
+        <button id="menuBtn" class="text-white focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="sm:hidden hidden px-4 pb-4 bg-primary">
+      <a href="index.html" class="block py-2 hover:text-secondary">Home</a>
+      <a href="services.html" class="block py-2 hover:text-secondary">Services</a>
+      <a href="index.html#contact" class="block py-2 hover:text-secondary">Contact</a>
+    </div>
+  </header>
+
+    <!-- Home / Hero Section -->
+  <section id="home" class="bg-[#F4F9FC] py-12 px-4 text-center">
+    <h2 class="text-3xl font-semibold text-[#1D2F42] mb-4">Empowering Education, Humanitarian Response, and Sustainable Development</h2>
+    <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+      JARO Projects & Consulting is a Kigali-based firm providing innovative, community-centered solutions in education, humanitarian response, and sustainable development.
+    </p>
+  </section>
+
+
+  <!-- Service Sections -->
+  <main class="py-12 px-4">
+    <div>
+      <center><h1 class="text-2xl font-bold">Services</h1></center>
+    </div>
+    <section id="esl" class="mb-16">
+      <h2 class="text-2xl font-bold text-primary mb-4">ESL Curriculum Development & Instruction</h2>
+      <p class="mb-4">We design and deliver industry-specific English language programs for adult learners, refugees, and professionals.</p>
+      <ul class="list-disc list-inside text-gray-700">
+        <li>Workplace ESL Training</li>
+        <li>Digital Learning Modules</li>
+        <li>Teacher Training & TOT Programs</li>
+      </ul>
+    </section>
+
+    <section id="sustainable-dev" class="mb-16 bg-light p-6 rounded-lg">
+      <h2 class="text-2xl font-bold text-primary mb-4">Sustainable Development Solutions</h2>
+      <p class="mb-4">Locally grounded strategies aligned with the UN Sustainable Development Goals (SDGs).</p>
+      <ul class="list-disc list-inside text-gray-700">
+        <li>Sustainable Livelihoods Programming</li>
+        <li>Environmental Education & Awareness</li>
+        <li>Community-Led Development Planning</li>
+        <li>Green Entrepreneurship & Social Innovation</li>
+      </ul>
+    </section>
+
+    <section id="humanitarian" class="mb-16">
+      <h2 class="text-2xl font-bold text-primary mb-4">Humanitarian Logistics & Emergency Consulting</h2>
+      <p class="mb-4">We assist humanitarian agencies with logistics, emergency planning, and local training.</p>
+      <ul class="list-disc list-inside text-gray-700">
+        <li>Field Logistics & Crisis Planning</li>
+        <li>Humanitarian Principles Training</li>
+        <li>Supply Chain & Distribution Design</li>
+      </ul>
+    </section>
+
+    <section id="project-management" class="mb-16 bg-light p-6 rounded-lg">
+      <h2 class="text-2xl font-bold text-primary mb-4">Project Management & Monitoring & Evaluation (M&E)</h2>
+      <p class="mb-4">Custom project management frameworks and M&E tools for performance and accountability.</p>
+      <ul class="list-disc list-inside text-gray-700">
+        <li>Proposal & Grant Writing</li>
+        <li>Logical Framework Design</li>
+        <li>Baseline & Endline Surveys</li>
+      </ul>
+    </section>
+
+    <section id="community-development" class="mb-16">
+      <h2 class="text-2xl font-bold text-primary mb-4">Community Development & Empowerment</h2>
+      <p class="mb-4">Empowering disadvantaged communities through inclusive development models.</p>
+      <ul class="list-disc list-inside text-gray-700">
+        <li>Grassroots Capacity Building</li>
+        <li>Rural Livelihood Initiatives</li>
+        <li>Women & Youth Empowerment Programs</li>
+        <li>Social Equity and Justice Programs</li>
+      </ul>
+    </section>
+
+    <section id="translation" class="mb-16 bg-light p-6 rounded-lg">
+      <h2 class="text-2xl font-bold text-primary mb-4">Translation & Interpretation Services</h2>
+      <p class="mb-4">Multilingual support for organizations operating across linguistic boundaries.</p>
+      <ul class="list-disc list-inside text-gray-700">
+        <li>English–Arabic Translation</li>
+        <li>Business & Technical Documentation</li>
+        <li>Simultaneous & Consecutive Interpretation</li>
+      </ul>
+    </section>
+  </main>
+
+    <!-- Contact Section -->
+  <section id="contact" class="py-12 px-4">
+    <div class="container mx-auto text-center">
+      <h3 class="text-2xl font-bold text-primary mb-4">Get in Touch</h3>
+      <p class="text-gray-700 mb-2">Phone: +250795577029, +12147092117</p>
+      <p class="text-gray-700 mb-2">Email: alwalid.adil@gmail.com</p>
+      <p class="text-gray-700">Email: jaropc@gmail.com</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white py-4">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2025 JARO Projects & Consulting. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
